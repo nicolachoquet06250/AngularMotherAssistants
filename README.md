@@ -16,3 +16,5 @@
     - https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API
   - Toutes les API et Webservices publiques Gratuits
     - https://github.com/public-apis/public-apis
+  - Menus contextuel customisés
+    - https://www.creativejuiz.fr/blog/tutoriels/creer-menu-contextuel-html5-javascript
