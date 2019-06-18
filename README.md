@@ -18,3 +18,4 @@
     - https://github.com/public-apis/public-apis
   - Menus contextuel customisés
     - https://www.creativejuiz.fr/blog/tutoriels/creer-menu-contextuel-html5-javascript
+    - https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/
