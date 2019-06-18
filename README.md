@@ -14,3 +14,5 @@
     - https://www.npmjs.com/package/@shooontan/voicetext
     - https://tutorialzine.com/2017/08/converting-from-speech-to-text-with-javascript
     - https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API
+  - Toutes les API et Webservices publiques Gratuits
+    - https://github.com/public-apis/public-apis
