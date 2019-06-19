@@ -1,0 +1,152 @@
+<mz-navbar>
+	<a href="#!" id="btn-sidenav-demo">
+		<i mz-icon
+		   [align]="'left'"
+		   [icon]="'menu'"
+		   [size]="'medium'"
+		   style="margin-left: 15px;"
+		   [ngClass]="{ 'hide-on-med-and-up': true }">
+		</i>
+	</a>
+	<img src="/assets/images/logo-web-transparent.png" class="brand-logo" style="height: 100%; cursor: pointer;"
+	     (click)="router.navigate(['/home'])" alt="MotherAssistants"/>
+	<mz-navbar-item-container [align]="'right'" [ngClass]="{ 'hide-on-small-and-down': true }">
+		<mz-navbar-item *ngIf="logged">
+			<a routerLink="/account/signOut">
+				<i class="material-icons">power_settings_new</i>
+			</a>
+		</mz-navbar-item>
+		<mz-navbar-item [active]="selected === 'home'">
+			<a routerLink="/home">
+				Accueil
+			</a>
+		</mz-navbar-item>
+		<mz-navbar-item *ngIf="logged" [active]="selected === 'me'">
+			<a routerLink="/me">
+				Mon compte
+			</a>
+		</mz-navbar-item>
+		<mz-navbar-item *ngIf="logged" [active]="selected === 'children'">
+			<a routerLink="/my-children">
+				Mes enfants
+			</a>
+		</mz-navbar-item>
+		<mz-navbar-item *ngIf="logged" [active]="selected === 'messages'">
+			<a routerLink="/messages">
+				Messages
+			</a>
+		</mz-navbar-item>
+		<mz-navbar-item *ngIf="logged" [active]="selected === 'life-diary'">
+			<a routerLink="/life-diary">
+				Cahier de vie
+			</a>
+		</mz-navbar-item>
+		<mz-navbar-item *ngIf="!logged" [active]="selected === 'login'">
+			<a routerLink="/me/login">
+				Je me connecte
+			</a>
+		</mz-navbar-item>
+		<mz-navbar-item *ngIf="!logged" [active]="selected === 'register'">
+			<a routerLink="/me/register">
+				Je m'inscris
+			</a>
+		</mz-navbar-item>
+		<mz-navbar-item [active]="selected === 'contact'">
+			<a routerLink="/contact">
+				Contacts
+			</a>
+		</mz-navbar-item>
+	</mz-navbar-item-container>
+</mz-navbar>
+<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'">
+	<mz-sidenav-link *ngIf="logged">
+		<a routerLink="/account/signOut">
+			Déconnection
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'power_settings_new'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+	<mz-sidenav-link [active]="selected === 'home'">
+		<a routerLink="/home">
+			Accueil
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'home'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+	<mz-sidenav-link *ngIf="logged" [active]="selected === 'me'">
+		<a routerLink="/me">
+			Mon compte
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'account_circle'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+	<mz-sidenav-link *ngIf="logged" [active]="selected === 'children'">
+		<a routerLink="/my-children">
+			Mes enfants
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'child_care'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+	<mz-sidenav-link *ngIf="logged" [active]="selected === 'messages'">
+		<a routerLink="/messages">
+			Messages
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'chat'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+	<mz-sidenav-link *ngIf="logged" [active]="selected === 'life-diary'">
+		<a routerLink="/life-diary">
+			Cahier de vie
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'event_note'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+	<mz-sidenav-link *ngIf="!logged" [active]="selected === 'login'">
+		<a routerLink="/me/login">
+			Je me connecte
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'power_settings_new'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+	<mz-sidenav-link *ngIf="!logged" [active]="selected === 'register'">
+		<a routerLink="/me/register">
+			Je m'inscris
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'power'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+	<mz-sidenav-link [active]="selected === 'contact'">
+		<a routerLink="/contact">
+			Contacts
+			<i mz-icon
+			   [align]="'left'"
+			   [icon]="'contact_mail'"
+			   [size]="'small'">
+			</i>
+		</a>
+	</mz-sidenav-link>
+</mz-sidenav>
