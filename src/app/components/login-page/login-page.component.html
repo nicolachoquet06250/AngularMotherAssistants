@@ -1,0 +1,96 @@
+<ma-menu [selected]="'login'" [role]="role"></ma-menu>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4 l8 offset-m4 offset-l2">
+            <mz-card [horizontal]="false"
+                     [hoverable]="false">
+                <mz-card-image>
+                    <img src="/assets/images/places-maxi-assistante-maternelle.png">
+                </mz-card-image>
+                <mz-card-content>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <mz-select-container>
+                                    <select mz-select
+                                            [(ngModel)]="role"
+                                            id="options-select"
+                                            [label]="'Je me connecte en tant que'"
+                                            [placeholder]="'...'">
+                                        <option *ngFor="let _role of roles" value="{{_role}}">{{_role}}</option>
+                                    </select>
+                                </mz-select-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" [ngClass]="{hide: role !== 'Assistante Maternelle'}">
+                        <div class="row">
+                            <h3>Assistante Maternelle</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <form>
+                                    <mz-input-container>
+                                        <input mz-input
+                                               [label]="'Email'"
+                                               [validate]="true"
+                                               [dataError]="'L\'Email est invalid'"
+                                               id="email-input-am"
+                                               type="email">
+                                    </mz-input-container>
+                                    <mz-input-container>
+                                        <input mz-input
+                                               [label]="'Mot de passe'"
+                                               id="password-input-am"
+                                               type="password">
+                                    </mz-input-container>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" [ngClass]="{hide: role !== 'Parent'}">
+                        <div class="row">
+                            <h3>Parents</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <form>
+                                    <mz-select-container>
+                                        <select mz-select
+                                                id="motherassistant-select"
+                                                [(ngModel)]="myMotherAssistant"
+                                                [ngModelOptions]="{ standalone: true }"
+                                                [label]="'Mon assistante maternelle est'"
+                                                [placeholder]="'...'">
+                                            <option *ngFor="let _ma of motherAssistants"
+                                                    [value]="_ma.id">
+                                                <img src="{{_ma.picture}}" class="circle left"
+                                                     [ngStyle]="{marginTop: '-10px'}" />
+                                               {{_ma.firstName}} {{_ma.lastName}}
+                                            </option>
+                                        </select>
+                                    </mz-select-container>
+                                    <mz-input-container>
+                                        <input mz-input
+                                               [label]="'Email'"
+                                               [validate]="true"
+                                               [dataError]="'L\'Email est invalid'"
+                                               id="email-input-parent"
+                                               type="email">
+                                    </mz-input-container>
+                                    <mz-input-container>
+                                        <input mz-input
+                                               [label]="'Mot de passe'"
+                                               id="password-input-parent"
+                                               type="password">
+                                    </mz-input-container>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </mz-card-content>
+            </mz-card>
+        </div>
+    </div>
+</div>
+<ma-footer></ma-footer>

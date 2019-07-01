@@ -48,3 +48,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   - Menus contextuel customisés
     - https://www.creativejuiz.fr/blog/tutoriels/creer-menu-contextuel-html5-javascript
     - https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/
+
+  - https://ds.gpii.net/develop/components/artyomjs
+  - https://sdkcarlos.github.io/jarvis.html
+  

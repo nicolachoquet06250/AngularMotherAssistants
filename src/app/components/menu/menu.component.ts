@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 export class MenuComponent implements OnInit {
   selected: string|null = null;
   role: string|null = null;
-  logged = true;
+  logged = false;
   constructor(private router: Router/*private http: HttpRequestService*/) {}
 
   ngOnInit() {

@@ -5,12 +5,13 @@
 		   [icon]="'menu'"
 		   [size]="'medium'"
 		   style="margin-left: 15px;"
-		   [ngClass]="{ 'hide-on-med-and-up': true }">
+		   [ngClass]="{ 'show-on-medium': true, 'hide-on-large-only': true }">
 		</i>
 	</a>
-	<img src="/assets/images/logo-web-transparent.png" class="brand-logo" style="height: 100%; cursor: pointer;"
-	     (click)="router.navigate(['/home'])" alt="MotherAssistants"/>
-	<mz-navbar-item-container [align]="'right'" [ngClass]="{ 'hide-on-small-and-down': true }">
+	<a (click)="router.navigate(['/'])">
+		<img src="/assets/images/logo-web-transparent.png" class="brand-logo" style="height: 100%; cursor: pointer;" alt="MotherAssistants"/>
+	</a>
+	<mz-navbar-item-container [align]="'right'" [ngClass]="{ 'show-on-large': true, 'hide-on-med-and-down': true }">
 		<mz-navbar-item *ngIf="logged">
 			<a routerLink="/account/signOut">
 				<i class="material-icons">power_settings_new</i>
